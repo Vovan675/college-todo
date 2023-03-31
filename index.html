@@ -2,27 +2,101 @@
 <html>
 <head>
     <title>To-Do List</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        input[type="text"] {
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            margin-right: 1rem;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 300px;
+            overflow-y: auto;
+            width: 100%;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        li input[type="checkbox"] {
+            margin-right: 1rem;
+        }
+        li button {
+            margin-left: auto;
+            background-color: #f44336;
+        }
+    </style>
 </head>
 <body>
     <h1>To-Do List</h1>
-    <input type="text" placeholder="New Element Name">
-    <button>Add</button>
+    <div>
+        <input type="text" id="newElement" placeholder="New Element Name">
+        <button onclick="addElement()">Add</button>
+    </div>
     <ul id="list">
         <li>
-            <input type="checkbox">
-            <span>Buy groceries</span>
-            <button>X</button>
+            <input type="checkbox" id="todo1" onclick="completeElement('todo1')">
+            <span id="todo1Text">Buy groceries</span>
+            <button onclick="removeElement('todo1')">X</button>
         </li>
         <li>
-            <input type="checkbox">
-            <span>Do laundry</span>
-            <button>X</button>
+            <input type="checkbox" id="todo2" onclick="completeElement('todo2')">
+            <span id="todo2Text">Do laundry</span>
+            <button onclick="removeElement('todo2')">X</button>
         </li>
         <li>
-            <input type="checkbox">
-            <span>Clean room</span>
-            <button>X</button>
+            <input type="checkbox" id="todo3" onclick="completeElement('todo3')">
+            <span id="todo3Text">Clean room</span>
+            <button onclick="removeElement('todo3')">X</button>
+        </li>
+        <li>
+            <input type="checkbox" id="todo3" onclick="completeElement('todo3')">
+            <span id="todo3Text">Clean room</span>
+            <button onclick="removeElement('todo3')">X</button>
+        </li>
+        <li>
+            <input type="checkbox" id="todo3" onclick="completeElement('todo3')">
+            <span id="todo3Text">Clean room</span>
+            <button onclick="removeElement('todo3')">X</button>
+        </li>
+        <li>
+            <input type="checkbox" id="todo3" onclick="completeElement('todo3')">
+            <span id="todo3Text">Clean room</span>
+            <button onclick="removeElement('todo3')">X</button>
         </li>
     </ul>
+    <script src="script.js"></script>
 </body>
 </html>
