@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    color: #333;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-container input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 24px;
+    color: #333;
+    background-color: #f2f2f2;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input-container input[type="text"]:focus {
+    border-color: #4CAF50;
+}
+
+.input-container button {
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.input-container button:hover {
+    background-color: #3e8e41;
+}
+
+.list-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+li:hover {
+    background-color: #f2f2f2;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+}
+
+li input[type="checkbox"]:checked {
+    border-color: #4CAF50;
+    background-color: #4CAF50;
+}
+
+li input[type="checkbox"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+li input[type="checkbox"]:checked + label {
+    background-color: #4CAF50;
+}
+
+li span {
+    flex-grow: 1;
+    font-size: 24px;
+    color: #333;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+li.completed {
+    background-color: #e6ffe6;
+}
+
+li.completed input[type="checkbox"] {
+    border-color: #4CAF50;
+    background-color: #4CAF50;
+}
+
+li.completed input[type="checkbox"] + label {
+    background-color: #4CAF50;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+li button {
+    margin-left: auto;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f44336;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+li button:hover {
+    background-color: #d32f2f;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.buttons-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+    }
+    
+    .buttons-container button:hover {
+    background-color: #3e8e41;
+    }
+    
+    .buttons-container button.active {
+    background-color: #333;
+    }
+    
+    @media screen and (max-width: 600px) {
+    h1 {
+    font-size: 36px;
+    }
+    .input-container input[type="text"] {
+    font-size: 18px;
+    }
+    .input-container button {
+    font-size: 18px;
+    }
+    li input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    }
+    li input[type="checkbox"] + label {
+    width: 16px;
+    height: 16px;
+    }
+    li span {
+    font-size: 18px;
+    }
+    li button {
+    font-size: 18px;
+    }
+    .buttons-container button {
+    font-size: 18px;
+    padding: 8px 16px;
+    }
+}
